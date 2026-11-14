@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Discover amazing destinations, unforgettable adventures and extraordinary travel experiences with TourVenture.">
+<title>TourVenture | Explore Beyond Limits</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:#24312b;background:#fff;line-height:1.6}
+:root{--green:#123d2b;--gold:#d6a84b;--light:#f5f7f3}
+header{background:var(--green);color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000}
+.logo{font-size:25px;font-weight:bold;color:white}
+.logo span{color:var(--gold)}
+nav{display:flex;gap:25px}
+nav a{color:white;text-decoration:none;font-weight:bold;font-size:14px}
+nav a:hover{color:var(--gold)}
+.menu{display:none;background:none;border:0;color:white;font-size:27px}
+.hero{min-height:620px;background:linear-gradient(#0008,#0008),url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=2000&q=85') center/cover;display:flex;align-items:center;padding:8%;color:white}
+.hero-content{max-width:720px}
+.hero h1{font-size:55px;line-height:1.15;margin-bottom:20px}
+.hero p{font-size:19px;margin-bottom:30px}
+.btn{display:inline-block;background:var(--gold);color:#173426;padding:14px 25px;border-radius:5px;text-decoration:none;font-weight:bold;margin:5px}
+.btn:hover{background:white}
+.btn-outline{background:transparent;border:2px solid white;color:white}
+section{padding:75px 7%}
+.heading{text-align:center;margin-bottom:40px}
+.heading h2{font-size:34px;color:var(--green)}
+.heading p{color:#777;margin-top:8px}
+.about{background:var(--light);display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about img{width:100%;height:390px;object-fit:cover;border-radius:10px}
+.about h2{font-size:34px;color:var(--green);margin-bottom:15px}
+.about p{margin-bottom:15px;color:#555}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.card{background:white;border-radius:10px;overflow:hidden;box-shadow:0 5px 20px #00000012;transition:.3s}
+.card:hover{transform:translateY(-7px)}
+.card img{width:100%;height:220px;object-fit:cover}
+.card-content{padding:20px}
+.card h3{color:var(--green);margin-bottom:8px}
+.card p{color:#666;font-size:14px}
+.experiences{background:var(--light)}
+.experience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.experience{background:var(--green);color:white;padding:30px;border-radius:9px;text-align:center}
+.experience h3{color:var(--gold);margin:12px 0}
+.icon{font-size:38px}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;text-align:center}
+.why div{padding:25px}
+.why h3{color:var(--green);margin:10px}
+.contact{background:var(--green);color:white;text-align:center}
+.contact h2{font-size:34px;color:var(--gold);margin-bottom:15px}
+.contact p{margin:10px}
+footer{background:#0a261a;color:#ddd;text-align:center;padding:25px}
+footer a{color:var(--gold);text-decoration:none}
+.whatsapp{position:fixed;bottom:22px;right:22px;background:#25D366;color:white;padding:15px 20px;border-radius:40px;text-decoration:none;font-weight:bold;z-index:1001;box-shadow:0 4px 15px #0003}
+@media(max-width:800px){
+nav{display:none;position:absolute;top:65px;left:0;width:100%;background:var(--green);flex-direction:column;padding:25px}
+nav.show{display:flex}
+.menu{display:block}
+.hero h1{font-size:39px}
+.about{grid-template-columns:1fr}
+.cards,.experience-grid,.why{grid-template-columns:1fr}
+section{padding:55px 6%}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Tour<span>Venture</span></div>
+<button class="menu" onclick="toggleMenu()">☰</button>
+<nav id="nav">
+<a href="#home" onclick="closeMenu()">Home</a>
+<a href="#about" onclick="closeMenu()">About Us</a>
+<a href="#destinations" onclick="closeMenu()">Destinations</a>
+<a href="#experiences" onclick="closeMenu()">Experiences</a>
+<a href="#contact" onclick="closeMenu()">Contact</a>
+</nav>
+</header>
+
+<div class="hero" id="home">
+<div class="hero-content">
+<h1>Explore Beyond Limits.</h1>
+<p>Discover extraordinary destinations, experience breathtaking adventures and create memories that last a lifetime. Your next journey begins with TourVenture.</p>
+<a href="#destinations" class="btn">Explore Destinations</a>
+<a href="#contact" class="btn btn-outline">Plan Your Journey</a>
+</div>
+</div>
+
+<section class="about" id="about">
+<div>
+<h2>Welcome to TourVenture</h2>
+<p>We believe travelling is more than visiting places. It is about discovering new cultures, experiencing nature and creating unforgettable memories.</p>
+<p>TourVenture is dedicated to helping travellers explore beautiful destinations and enjoy meaningful travel experiences.</p>
+<p>Whether you dream of wildlife adventures, relaxing escapes, scenic landscapes or cultural discoveries, your next adventure starts here.</p>
+<a href="#contact" class="btn">Travel With Us</a>
+</div>
+<img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1000&q=85" alt="African wildlife safari">
+</section>
+
+<section id="destinations">
+<div class="heading">
+<h2>Discover Amazing Destinations</h2>
+<p>Explore beautiful places and find your next adventure.</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=900&q=85" alt="African safari">
+<div class="card-content">
+<h3>African Safari</h3>
+<p>Experience incredible wildlife, breathtaking landscapes and unforgettable safari adventures.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=85" alt="Mountain adventure">
+<div class="card-content">
+<h3>Mountain Adventures</h3>
+<p>Discover magnificent mountains, beautiful scenery and exciting outdoor experiences.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85" alt="Tropical beach">
+<div class="card-content">
+<h3>Beach Escapes</h3>
+<p>Relax along beautiful coastlines, enjoy ocean views and experience peaceful escapes.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=85" alt="Scenic nature">
+<div class="card-content">
+<h3>Nature Exploration</h3>
+<p>Reconnect with nature and discover some of the world's most beautiful landscapes.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=900&q=85" alt="City travel">
+<div class="card-content">
+<h3>City Discoveries</h3>
+<p>Explore vibrant cities, architecture, entertainment and different cultures.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=85" alt="Scenic getaway">
+<div class="card-content">
+<h3>Holiday Getaways</h3>
+<p>Find beautiful destinations for relaxation, celebrations and memorable holidays.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="experiences" id="experiences">
+<div class="heading">
+<h2>Our Travel Experiences</h2>
+<p>Something exciting for every kind of traveller.</p>
+</div>
+<div class="experience-grid">
+<div class="experience">
+<div class="icon">🦁</div>
+<h3>Wildlife Adventures</h3>
+<p>Get closer to nature and experience amazing wildlife encounters.</p>
+</div>
+<div class="experience">
+<div class="icon">🏔️</div>
+<h3>Adventure Travel</h3>
+<p>Discover exciting outdoor activities and unforgettable journeys.</p>
+</div>
+<div class="experience">
+<div class="icon">🌴</div>
+<h3>Relaxation Holidays</h3>
+<p>Enjoy peaceful destinations and refreshing holiday experiences.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="heading">
+<h2>Why Choose TourVenture?</h2>
+<p>Travel should be exciting, memorable and inspiring.</p>
+</div>
+<div class="why">
+<div>
+<div class="icon">🌍</div>
+<h3>Discover More</h3>
+<p>Explore destinations and experiences around the world.</p>
+</div>
+<div>
+<div class="icon">✨</div>
+<h3>Memorable Experiences</h3>
+<p>Make every journey an opportunity to create lasting memories.</p>
+</div>
+<div>
+<div class="icon">🤝</div>
+<h3>Personal Support</h3>
+<p>Contact our team to discuss your travel plans and enquiries.</p>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2>Ready for Your Next Adventure?</h2>
+<p>Your dream destination is waiting. Let's start planning your journey.</p>
+<p>Contact TourVenture directly through WhatsApp.</p>
+<a class="btn" href="https://wa.me/254108599349?text=Hello%20TourVenture%2C%20I%20would%20like%20to%20make%20a%20travel%20enquiry." target="_blank">Chat With Us on WhatsApp</a>
+<p>WhatsApp: +254 108 599 349</p>
+</section>
+
+<footer>
+<div class="logo">Tour<span>Venture</span></div>
+<p>Explore Beyond Limits. Discover More.</p>
+<p>© <span id="year"></span> TourVenture. All Rights Reserved.</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/254108599349?text=Hello%20TourVenture%2C%20I%20need%20travel%20information." target="_blank">☏ WhatsApp Us</a>
+
+<script>
+function toggleMenu(){
+document.getElementById("nav").classList.toggle("show");
+}
+function closeMenu(){
+document.getElementById("nav").classList.remove("show");
+}
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+
+</body>
+</html>
